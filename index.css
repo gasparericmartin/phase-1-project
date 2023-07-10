@@ -1,0 +1,61 @@
+h1 {
+    text-align: center;
+    font-family: arial;
+}
+
+
+#fish-button {
+    float: left;
+}
+
+#bug-button {
+    float: right;
+}
+
+#left-button-box {
+    float: left;
+    height: 100%;
+}
+
+#right-button-box {
+    float: right;
+    height: 100%;
+}
+
+h3 {
+    text-align: center;
+}
+
+#container {
+    /* background-color: rgb(121, 34, 34); */
+    width: stretch;
+    height: 168px;
+    margin: 0 auto;
+}
+
+body {
+    background-image: url('https://nintendosoup.com/wp-content/uploads/2020/02/animal-crossing-new-horizons-walmart-wallpaper-feb192020-3.jpeg')
+}
+
+.card {
+    background-color: rgba(44, 29, 29, 0.9);
+    display: inline-grid;
+    text-align: center;
+    margin: 10px 10px;
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.item-image {
+    justify-self: center;
+    background-color: antiquewhite;
+}
+
+p {
+    color: white;
+    width: 128px;
+}
+
+
