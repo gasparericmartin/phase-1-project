@@ -26,3 +26,21 @@ function createCards(e) {
     }))
 }
 
+function handleName(name) {
+    const nameArray = []
+    const newName = name.replace(/[^-0-9a-z]/gi, ' ').split(' ')
+
+    newName.forEach(namePart => {
+        let modName = namePart.split('')
+        modName[0] = modName[0].toUpperCase()
+    
+        if(modName.findIndex(e => e === '-') !== -1) {
+            const toCap = modName.findIndex(e => e === '-') + 1
+            modName[toCap] = modName[toCap].toUpperCase()
+        }
+    
+        nameArray.push(modName.join(''))
+    })
+
+    return nameArray.join(' ')
+}
