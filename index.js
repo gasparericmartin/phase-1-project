@@ -23,6 +23,7 @@ function createCards(e) {
         itemName.className = 'card-name'
 
         itemImage.addEventListener('pointerenter', handleHoverOnImage)
+        itemImage.addEventListener('pointerout', handleHoverOffImage)
 
         
         itemContainer.append(itemName, itemImage)
@@ -52,4 +53,8 @@ function handleName(name) {
 
 function handleHoverOnImage(e) {
     e.target.previousSibling.className = 'card-name-hover'
+}
+
+function handleHoverOffImage(e) {
+    e.target.previousSibling.className = 'card-name'
 }
