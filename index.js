@@ -20,6 +20,11 @@ function createCards(e) {
         itemImage.src = item.icon_uri
         itemImage.alt = `Picture of a ${item['file-name']}`
         itemName.textContent = handleName(item['file-name'])
+        itemName.className = 'card-name'
+
+        itemContainer.addEventListener('pointerover', handleHoverOnDiv)
+        itemContainer.addEventListener('pointerout', handleHoverOffDiv)
+
         
         itemContainer.append(itemName, itemImage)
         document.getElementById('container').append(itemContainer)
@@ -43,4 +48,12 @@ function handleName(name) {
     })
 
     return nameArray.join(' ')
+}
+
+function handleHoverOnDiv(e) {
+    e.target.childNodes[0].className = 'card-name-hover'
+}
+
+function handleHoverOffDiv(e) {
+    e.target.childNodes[0].className = 'card-name'
 }
