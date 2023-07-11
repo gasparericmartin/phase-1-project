@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded', () => {
 function createCards(e) {
     document.getElementById('container').innerHTML = ''
     const fetchEndpoint = e.target.value
-    console.log(fetchEndpoint)
     
     fetch(`https://acnhapi.com/v1a/${fetchEndpoint}`)
     .then(response => response.json())
@@ -24,6 +23,7 @@ function createCards(e) {
 
         itemImage.addEventListener('pointerenter', handleHoverOnImage)
         itemImage.addEventListener('pointerout', handleHoverOffImage)
+        itemContainer.addEventListener('click', displayFullInfo)
 
         
         itemContainer.append(itemName, itemImage)
@@ -57,4 +57,8 @@ function handleHoverOnImage(e) {
 
 function handleHoverOffImage(e) {
     e.target.previousSibling.className = 'card-name'
+}
+
+function displayFullInfo (e) {
+    
 }
