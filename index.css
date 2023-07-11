@@ -46,6 +46,12 @@ body {
     height: 200px;
     border-radius: 5px;
     justify-content: center;
+    /* border: white solid 1px; */
+}
+
+.card:hover {
+    top: -2px;
+    box-shadow: -10px 10px rgba(0,0,0,0.8);
 }
 
 .item-image {
