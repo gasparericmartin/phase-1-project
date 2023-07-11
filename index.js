@@ -60,14 +60,38 @@ function handleHoverOffImage(e) {
 }
 
 function getFullInfo (e) {
-    console.log(e.target.previousSibling.textContent)
     const fetchEndpoint = e.target.src.replace('/icons', '')
     
     fetch(fetchEndpoint)
     .then(response => response.json())
-    .then(data => displayFullInfo(data))
+    .then(data => displayFullInfo(data, name))
 }
 
 function displayFullInfo(item) {
+    console.log(item)
 
+    if (document.getElementById('background-shadow')) {
+        document.getElementById('background-shadow').remove()
+    }
+
+    const bgShadow = document.createElement('div')
+    const infoContainer = document.createElement('div')
+    const name = document.createElement('h2')
+    const picture = document.createElement('img')
+    const description = document.createElement('p')
+
+    bgShadow.id = 'background-shadow'
+    infoContainer.id = 'info-container'
+    name.id = 'full-info-name'
+    picture.id = 'full-info-picture'
+    description.id = 'full-info-description'
+    name.textContent = handleName(item['file-name'])
+    picture.src = item.image_uri
+    picture.alt = `Picture of a ${item['file-name']}`
+    description.textContent = item['museum-phrase']
+
+    infoContainer.append(name, picture, description)
+    bgShadow.append(infoContainer)
+    document.getElementById('container').append(bgShadow)
+    
 }
