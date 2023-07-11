@@ -23,7 +23,7 @@ function createCards(e) {
 
         itemImage.addEventListener('pointerenter', handleHoverOnImage)
         itemImage.addEventListener('pointerout', handleHoverOffImage)
-        itemContainer.addEventListener('click', displayFullInfo)
+        itemContainer.addEventListener('click', getFullInfo)
 
         
         itemContainer.append(itemName, itemImage)
@@ -59,6 +59,15 @@ function handleHoverOffImage(e) {
     e.target.previousSibling.className = 'card-name'
 }
 
-function displayFullInfo (e) {
+function getFullInfo (e) {
+    console.log(e.target.previousSibling.textContent)
+    const fetchEndpoint = e.target.src.replace('/icons', '')
     
+    fetch(fetchEndpoint)
+    .then(response => response.json())
+    .then(data => displayFullInfo(data))
+}
+
+function displayFullInfo(item) {
+
 }
