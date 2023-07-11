@@ -22,8 +22,7 @@ function createCards(e) {
         itemName.textContent = handleName(item['file-name'])
         itemName.className = 'card-name'
 
-        itemContainer.addEventListener('pointerover', handleHoverOnDiv)
-        itemContainer.addEventListener('pointerout', handleHoverOffDiv)
+        itemImage.addEventListener('pointerenter', handleHoverOnImage)
 
         
         itemContainer.append(itemName, itemImage)
@@ -50,10 +49,7 @@ function handleName(name) {
     return nameArray.join(' ')
 }
 
-function handleHoverOnDiv(e) {
-    e.target.childNodes[0].className = 'card-name-hover'
-}
 
-function handleHoverOffDiv(e) {
-    e.target.childNodes[0].className = 'card-name'
+function handleHoverOnImage(e) {
+    e.target.previousSibling.className = 'card-name-hover'
 }
