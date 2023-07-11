@@ -42,7 +42,7 @@ body {
     display: inline-grid;
     text-align: center;
     margin: 10px 10px;
-    width: 300px;
+    width: 200px;
     height: 200px;
     border-radius: 5px;
     justify-content: center;
@@ -59,8 +59,13 @@ body {
     background-color: antiquewhite;
 }
 
-p {
+.card-name {
     color: white;
+    width: 128px;
+}
+
+.card-name-hover {
+    color: yellow;
     width: 128px;
 }
 
