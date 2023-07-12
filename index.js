@@ -24,7 +24,6 @@ function createCards(e) {
         itemImage.addEventListener('pointerenter', handleHoverOnImage)
         itemImage.addEventListener('pointerout', handleHoverOffImage)
         itemContainer.addEventListener('click', getFullInfo)
-
         
         itemContainer.append(itemName, itemImage)
         document.getElementById('container').append(itemContainer)
@@ -60,16 +59,25 @@ function handleHoverOffImage(e) {
 }
 
 function getFullInfo (e) {
-    const fetchEndpoint = e.target.src.replace('/icons', '')
+
+    let fetchEndpoint = ''
+    if (e.target.src) {
+        fetchEndpoint = e.target.src.replace('/icons', '')
+    }
+    else if (e.target.nextSibling.src) {
+        fetchEndpoint = e.target.nextSibling.src.replace('/icons', '')
+    }
+    else {
+        fetchEndpoint = e.target.childNodes[1].src.replace('/icons', '')        
+    }
+    
     
     fetch(fetchEndpoint)
     .then(response => response.json())
-    .then(data => displayFullInfo(data, name))
+    .then(data => displayFullInfo(data))
 }
 
 function displayFullInfo(item) {
-    console.log(item)
-
     if (document.getElementById('background-shadow')) {
         document.getElementById('background-shadow').remove()
     }
