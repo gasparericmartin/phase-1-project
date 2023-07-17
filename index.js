@@ -6,6 +6,16 @@ window.addEventListener('DOMContentLoaded', () => {
 function createCards(e) {
     document.getElementById('container').innerHTML = ''
     const fetchEndpoint = e.target.value
+
+    if (fetchEndpoint === 'fish') {
+        console.log('fish')
+        document.getElementsByTagName('h1')[0].textContent = 'Fish'
+    }
+
+    if (fetchEndpoint === 'bugs') {
+        console.log('bugs')
+        document.getElementsByTagName('h1')[0].textContent = 'Bugs'
+    }
     
     fetch(`https://acnhapi.com/v1a/${fetchEndpoint}`)
     .then(response => response.json())
