@@ -5,11 +5,11 @@ h1 {
 
 
 #fish-button {
-    float: left;
+    float: 40%;
 }
 
 #bug-button {
-    float: right;
+    float: 60%;
 }
 
 #left-button-box {

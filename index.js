@@ -53,7 +53,8 @@ function makeSwitchButton(endpoint) {
     switchButton.addEventListener('click', createCards)
 
     buttonContainer.append(switchButton)
-    document.getElementsByTagName('h1')[0].appendChild(buttonContainer)
+
+    document.getElementsByTagName('h1')[0].append(buttonContainer)
 }
 
 function handleName(name) {
