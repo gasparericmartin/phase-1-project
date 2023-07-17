@@ -8,13 +8,13 @@ function createCards(e) {
     const fetchEndpoint = e.target.value
 
     if (fetchEndpoint === 'fish') {
-        console.log('fish')
         document.getElementsByTagName('h1')[0].textContent = 'Fish'
+        makeSwitchButton('bugs')
     }
 
     if (fetchEndpoint === 'bugs') {
-        console.log('bugs')
         document.getElementsByTagName('h1')[0].textContent = 'Bugs'
+        makeSwitchButton('fish')
     }
     
     fetch(`https://acnhapi.com/v1a/${fetchEndpoint}`)
@@ -38,6 +38,22 @@ function createCards(e) {
         itemContainer.append(itemName, itemImage)
         document.getElementById('container').append(itemContainer)
     }))
+}
+
+function makeSwitchButton(endpoint) {
+    const buttonContainer = document.createElement('div')
+    const switchButton = document.createElement('input')
+
+    buttonContainer.id = 'switch-button-container'
+    switchButton.type = 'image'
+    switchButton.id = `${endpoint}-button`
+    switchButton.value = endpoint
+    switchButton.src = `https://acnhapi.com/v1/icons/${endpoint}/1`
+
+    switchButton.addEventListener('click', createCards)
+
+    buttonContainer.append(switchButton)
+    document.getElementsByTagName('h1')[0].appendChild(buttonContainer)
 }
 
 function handleName(name) {
