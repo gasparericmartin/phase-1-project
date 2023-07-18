@@ -11,8 +11,7 @@ function createCards(e) {
         document.getElementsByTagName('h1')[0].textContent = 'Fish'
         makeSwitchButton('bugs')
     }
-
-    if (fetchEndpoint === 'bugs') {
+    else if (fetchEndpoint === 'bugs') {
         document.getElementsByTagName('h1')[0].textContent = 'Bugs'
         makeSwitchButton('fish')
     }
@@ -116,6 +115,8 @@ function displayFullInfo(item) {
     const description = document.createElement('p')
     const escapeMessage = document.createElement('p')
 
+    document.addEventListener('keydown', removeFullInfo)
+
     bgShadow.id = 'background-shadow'
     infoContainer.id = 'info-container'
     name.id = 'full-info-name'
@@ -131,4 +132,8 @@ function displayFullInfo(item) {
     bgShadow.append(infoContainer)
     document.getElementById('container').append(bgShadow)
     
+}
+
+function removeFullInfo(e) {
+
 }
