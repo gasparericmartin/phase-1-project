@@ -135,5 +135,8 @@ function displayFullInfo(item) {
 }
 
 function removeFullInfo(e) {
-
+    if (e.key === 'Escape') {
+        document.getElementById('background-shadow').remove()
+    }
+    document.removeEventListener('keydown', removeFullInfo)
 }
