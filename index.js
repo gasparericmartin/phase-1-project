@@ -114,6 +114,7 @@ function displayFullInfo(item) {
     const name = document.createElement('h2')
     const picture = document.createElement('img')
     const description = document.createElement('p')
+    const escapeMessage = document.createElement('p')
 
     bgShadow.id = 'background-shadow'
     infoContainer.id = 'info-container'
@@ -124,8 +125,9 @@ function displayFullInfo(item) {
     picture.src = item.image_uri
     picture.alt = `Picture of a ${item['file-name']}`
     description.textContent = item['museum-phrase']
+    escapeMessage.textContent = 'Press ESC to exit'
 
-    infoContainer.append(name, picture, description)
+    infoContainer.append(name, picture, description, escapeMessage)
     bgShadow.append(infoContainer)
     document.getElementById('container').append(bgShadow)
     
