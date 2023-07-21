@@ -5,3 +5,10 @@ The Animal Crossing Bestiary is a compilation and display of all of the fish and
 ## Installation
 
 Clone this repository and save it to your local environment.
+
+## Running the Program
+
+Open index.html via:
+- finder (or other applicable file explorer)
+- browser address bar
+- terminal
