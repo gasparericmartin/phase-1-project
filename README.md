@@ -28,3 +28,9 @@ Select the bug/fish and click the card to display its information:
 Placeholder for gif
 
 Press ESC to exit the currently displayed card
+
+## Acknowledgments
+
+- Animal Crossing New Horizons API from Alexis#8717 (Discord)
+- NintendoSoup.com for hosting the background image, originally released by Walmart.
+- Justin Rodriguez for guidance, support, and help with testing.
