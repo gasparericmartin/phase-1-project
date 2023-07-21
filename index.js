@@ -96,8 +96,7 @@ function getFullInfo (e) {
     else {
         fetchEndpoint = e.target.childNodes[1].src.replace('/icons', '')        
     }
-    
-    
+        
     fetch(fetchEndpoint)
     .then(response => response.json())
     .then(data => displayFullInfo(data))
@@ -109,7 +108,6 @@ function displayFullInfo(item) {
     }
 
     const bgShadow = document.createElement('div')
-    const infoContainer = document.createElement('div')
     const name = document.createElement('h2')
     const picture = document.createElement('img')
     const description = document.createElement('p')
@@ -118,9 +116,7 @@ function displayFullInfo(item) {
     document.addEventListener('keydown', removeFullInfo)
 
     bgShadow.id = 'background-shadow'
-    infoContainer.id = 'info-container'
     name.id = 'full-info-name'
-    picture.id = 'full-info-picture'
     description.id = 'full-info-description'
     name.textContent = handleName(item['file-name'])
     picture.src = item.image_uri
@@ -128,8 +124,14 @@ function displayFullInfo(item) {
     description.textContent = item['museum-phrase']
     escapeMessage.textContent = 'Press ESC to exit'
 
-    infoContainer.append(name, picture, description, escapeMessage)
-    bgShadow.append(infoContainer)
+    if(item['image_uri'].split('/').find(e => e === 'fish')) {
+        picture.id = 'full-info-fish-picture'
+    }
+    else {
+        picture.id = 'full-info-bug-picture'
+    }
+
+    bgShadow.append(name, picture, description, escapeMessage)
     document.getElementById('container').append(bgShadow)
     
 }

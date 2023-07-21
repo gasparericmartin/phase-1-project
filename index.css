@@ -55,7 +55,7 @@ body {
     text-align: center;
     margin: 10px 10px;
     width: 200px;
-    height: 200px;
+    height: 210px;
     border-radius: 5px;
     justify-content: center;
     /* border: white solid 1px; */
@@ -83,18 +83,24 @@ body {
 
 #background-shadow {
     position: fixed;
-    top: 25%;
+    top: 18%;
     width: 70%;
+    height: auto;
     background-color: rgba(44, 29, 29, 0.9);
     left: 50%;
     transform: translate(-50%, 0);
     text-align: center;
     color: white;
     border-radius: 10px;
-    
 }
 
-#full-info-picture {
-    width: 100%;
-    height: auto;
+#full-info-fish-picture {
+    max-width: 500px;
+    max-height: 400px;
 }
+
+#full-info-bug-picture {
+    max-width: 300px;
+    max-height: 400px;
+}
+
