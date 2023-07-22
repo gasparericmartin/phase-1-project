@@ -21,13 +21,11 @@ Select "fish" or "bugs" by clicking the associated icon:
 
 Switch back and forth between the two sets by clicking the icon at the top of the page:
 
-Placeholder for gif
+![Switch Pages](https://github.com/gasparericmartin/phase-1-project/blob/main/README-assets/page-switch.gif?raw=true)
 
 Select the bug/fish and click the card to display its information:
 
 Placeholder for gif
-
-Press ESC to exit the currently displayed card
 
 ## Acknowledgments
 
