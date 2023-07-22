@@ -17,7 +17,7 @@ Open index.html via:
 
 Select "fish" or "bugs" by clicking the associated icon:
 
-![Landing Page]https://github.com/gasparericmartin/phase-1-project/blob/main/README-assets/landing-page.gif?raw=true
+![Landing Page](https://github.com/gasparericmartin/phase-1-project/blob/main/README-assets/landing-page.gif?raw=true)
 
 Switch back and forth between the two sets by clicking the icon at the top of the page:
 
