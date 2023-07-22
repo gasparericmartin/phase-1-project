@@ -17,15 +17,15 @@ Open index.html via:
 
 Select "fish" or "bugs" by clicking the associated icon:
 
-![Landing Page](https://github.com/gasparericmartin/phase-1-project/blob/main/README-assets/landing-page.gif?raw=true)
+![Landing page](https://github.com/gasparericmartin/phase-1-project/blob/main/README-assets/landing-page.gif?raw=true)
 
 Switch back and forth between the two sets by clicking the icon at the top of the page:
 
-![Switch Pages](https://github.com/gasparericmartin/phase-1-project/blob/main/README-assets/page-switch.gif?raw=true)
+![Switch pages](https://github.com/gasparericmartin/phase-1-project/blob/main/README-assets/page-switch.gif?raw=true)
 
 Select the bug/fish and click the card to display its information:
 
-Placeholder for gif
+![Select card and exit](https://github.com/gasparericmartin/phase-1-project/blob/main/README-assets/select-card+exit.gif?raw=true) 
 
 ## Acknowledgments
 
