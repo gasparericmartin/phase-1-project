@@ -30,8 +30,13 @@ function createCards(e) {
         itemName.textContent = handleName(item['file-name'])
         itemName.className = 'card-name'
 
-        itemImage.addEventListener('pointerenter', handleHoverOnImage)
-        itemImage.addEventListener('pointerout', handleHoverOffImage)
+        itemImage.addEventListener('pointerenter', e => {
+            e.target.previousSibling.className = 'card-name-hover'
+        })
+        itemImage.addEventListener('pointerout', e => {
+            e.target.previousSibling.className = 'card-name'
+        })
+        
         itemContainer.addEventListener('click', getFullInfo)
         
         itemContainer.append(itemName, itemImage)
@@ -75,17 +80,7 @@ function handleName(name) {
     return nameArray.join(' ')
 }
 
-
-function handleHoverOnImage(e) {
-    e.target.previousSibling.className = 'card-name-hover'
-}
-
-function handleHoverOffImage(e) {
-    e.target.previousSibling.className = 'card-name'
-}
-
 function getFullInfo (e) {
-
     let fetchEndpoint = ''
     if (e.target.src) {
         fetchEndpoint = e.target.src.replace('/icons', '')
